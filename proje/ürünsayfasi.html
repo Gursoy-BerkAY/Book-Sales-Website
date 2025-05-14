@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .urunpng{
+            background-image: url();
+        }
+        @media screen and (max-width:1200px) {
+            .sayfa{
+                max-width: 100%;
+                margin: 0 auto;
+                padding: 0;
+
+            }
+            .urunpng{
+                width: 100%;
+                height: 350px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                margin-bottom: 30px;
+            }
+            .urunack{
+                width: 95%;
+                box-sizing: border-box;
+            }
+            .fiyatkutusu{
+                text-align: center;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                margin-bottom: 30px;
+                border-top: 1px solid gray;
+                box-sizing: border-box;
+                padding-top: 15px;
+            }
+            .fiyat{
+                display: inline;
+            }
+            .sepet{
+                margin-right: 60px;
+                margin-left: 30px;
+            }
+            #dekstop{
+                display: none;
+            }
+        }
+        @media screen and (min-width:1200px) {
+            body{
+                background-color: #f0f4c3;
+            }
+            .sayfa{
+                background-color: transparent;
+            margin:  auto;
+            min-height: 410px;
+            max-width: 70%;
+            padding: 10px;
+            border: 3px solid gray;
+            border-radius: 35px;
+        }
+        .urunpng{
+            background-color: #616161;
+            margin: 30px 5px;
+            width: 45%;
+            height: 340px;
+            float: left;
+            border: 3px solid rgb(59, 138, 112);
+            border-radius: 35px;
+            background-size: calc(100% - 50%) calc(100% - 20px);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .urunack{
+            right: 32%;
+            position: absolute;
+            margin-left: -12px;
+            background-color: #616161;
+            box-shadow: 0 0 44px #616161;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            width: 26%;
+            float: left;
+            border: 3px solid rgb(59, 138, 112);
+            box-sizing: border-box;
+            padding: 20px;
+            border-radius: 35px;
+        }
+        .fiyat{
+            font-style: italic;
+            font-size: 18px;
+            font-weight: 400;
+            color: #ffe082;
+            line-height: 35px;
+            display: inline;
+            margin-right: 15px;
+            margin-left: 10px;
+        }
+        #btn{
+            border-radius: 15px;
+            float: right;
+            height: 37px;
+            background-color: white;
+            border: 1px solid ;
+            transition: all 0.4s ease-in;
+            color: #8e244a;
+        }
+        #btn:hover{
+            background-color: black;
+            color: aquamarine;
+            box-shadow: 0 0 20px black;
+            border: 1px solid rgb(26, 25, 25);
+        }
+        #mobile{
+            display: none;
+        }
+        .ack{
+            color: aliceblue;
+        }
+        }
+        #sepet{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border-radius: 25px;
+            z-index: 5;
+            background-image: url(img/logo.png);
+            background-size: contain;
+            background-position: center;
+            transform: scale(0.8);
+        }
+        #sayac{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 700;
+            z-index: 6;
+            width: 30px;
+            height: 30px;
+            margin: 56% 56%;
+            text-align: center;
+            line-height: 24px;
+            border-radius: 12px;
+            background-color: red;
+            opacity: 80%;
+            box-shadow: 0 0 23px red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="sepet" onclick="sepet()"><p id="sayac">0</p></div>
+
+
+    
+    <div id="dekstop" class="sayfa">
+        <div class="urunpng"></div>
+        <div class="urunack">
+            <div class="ack-kutusu"><p class="ack"></p></div>
+            <div class="fiyatkutusu">
+                <p class="fiyat"></p>
+                <input type="button" onclick="sepeteekle()" value="Sepete Ekle" id="btn">
+            </div>
+        </div>
+        <div id="Benzer"></div>
+    </div>
+
+
+    <div id="mobile" class="sayfa">
+        <div class="urunpng"></div>
+        <div class="ack-kutusu"><p class="ack"></p></div>
+        <div class="urunack">
+            <div class="fiyatkutusu">
+                <p class="fiyat">250TL</p>
+                <input type="button" value="Sepete Ekle" class="sepet">
+            </div>
+        </div>
+    </div>
+    <script src="ürün.js">
+
+    </script>
+</body>
+</html>

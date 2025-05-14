@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitap Satış Sitesi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="stil.css">
+    <style>
+        #sepet{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border-radius: 25px;
+            z-index: 5;
+            background-image: url(img/logo.png);
+            background-size: contain;
+            background-position: center;
+            transform: scale(0.8);
+        }
+        #sayac{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 700;
+            z-index: 6;
+            width: 30px;
+            height: 30px;
+            margin: 56% 56%;
+            text-align: center;
+            line-height: 24px;
+            border-radius: 12px;
+            background-color: red;
+            opacity: 80%;
+            box-shadow: 0 0 23px red;
+        }
+
+    </style></head>
+<body>
+    <div id="sepet" onclick="sepet()"><p id="sayac">0</p></div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Kitap Satış</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Anasayfa.html">Ana Sayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Ürünlerimiz.html">Kitaplar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">İletişim</a>
+                </li>
+                <div class="dropdown" id="menu">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Türler
+                    </button>
+                    <ul class="dropdown-menu">
+                        <h2>Türler <br>------------</h2>
+                      <li><a class="dropdown-item" href="Ürünlerimiz.html#Aksiyon"><p class="p">Aksiyon</p></a></li>
+                      <li><a class="dropdown-item" href="Ürünlerimiz.html#Bilimkurgu"><p class="p">Bilim Kurgu</p></a></li>
+                      <li><a class="dropdown-item" href="#"><p class="p">Çocuk Kitabı</p></a></li>
+                      <li><a class="dropdown-item" href="#"><p class="p">Eğitim</p></a></li>
+                      <li><a class="dropdown-item" href="#"><p class="p">Fantastik</p></a></li>
+                      <li><a class="dropdown-item" href="#"><p class="p">Felsefe</p></a></li>
+                    </ul>
+                  </div>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->
+<header class="bg-primary text-white text-center py-5">
+    <div class="container">
+        <h1>Hoşgeldiniz Kitap Satış Sitesi</h1>
+        <p class="lead">Binlerce kitabı keşfetmeye hazır mısınız?</p>
+    </div>
+</header>
+
+
+
+
+
+
+
+
+
+<div id="sayfa">
+     <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/Bilgi1.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/Bilgi1.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/Bilgi1.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Popüler Kitaplar</h2>
+            <div class="row kutu">
+                <!-- Kitap 1 -->
+                <div class="col-md-4  mb-4">
+                    <div class="card h-100">
+                        <img src="img/atomikalışkanlıklar.png" class="card-img-top" alt="Kitap 1">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Kitap 1</h5>
+                            <p class="card-text">Kitap 1 hakkında kısa açıklama.</p>
+                            <button class="btn btn-primary mt-auto" onclick="satınAl('Kitap 1')">Satın Al</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kitap 2 -->
+                <div class="col-md-4  mb-4">
+                    <div class="card h-100">
+                        <img src="img/hayatimkansız.png" class="card-img-top" alt="Kitap 2">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Kitap 2</h5>
+                            <p class="card-text">Kitap 2 hakkında kısa açıklama.</p>
+                            <button class="btn btn-primary mt-auto" onclick="satınAl('Kitap 2')">Satın Al</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kitap 3 -->
+                <div class="col-md-4  mb-4">
+                    <div class="card h-100">
+                        <img src="img/hyunamdong.png" class="card-img-top" alt="Kitap 3">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Kitap 3</h5>
+                            <p class="card-text">Kitap 3 hakkında kısa açıklama.</p>
+                            <button class="btn btn-primary mt-auto" onclick="satınAl('Kitap 3')">Satın Al</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kitap 4 -->
+                <div class="col-md-4  mb-4">
+                    <div class="card h-100">
+                        <img src="img/kalkcalisbaşarısızol.png" class="card-img-top" alt="Kitap 4">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Kitap 4</h5>
+                            <p class="card-text">Kitap 4 hakkında kısa açıklama.</p>
+                            <button class="btn btn-primary mt-auto" onclick="satınAl('Kitap 4')">Satın Al</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kitap 5 -->
+                <div class="col-md-4  mb-4">
+                    <div class="card h-100">
+                        <img src="img/yaşamak.png" class="card-img-top" alt="Kitap 5">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Kitap 5</h5>
+                            <p class="card-text">Kitap 5 hakkında kısa açıklama.</p>
+                            <button class="btn btn-primary mt-auto" onclick="satınAl('Kitap 5')">Satın Al</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kitap 6 -->
+                <div class="col-md-4  mb-4">
+                    <div class="card h-100">
+                        <img src="img/yırtıcıkuşlarzamanı.png" class="card-img-top" alt="Kitap 6">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Kitap 6</h5>
+                            <p class="card-text">Kitap 6 hakkında kısa açıklama.</p>
+                            <button class="btn btn-primary mt-auto" onclick="satınAl('Kitap 6')">Satın Al</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var canClick = true;
+
+        function enableClick() {
+            canClick = true;
+        }
+
+        document.getElementById('scroll-left').onclick = function() {
+            if (canClick) {
+                canClick = false;
+                var productList = document.getElementById('product-list');
+                productList.scrollBy({
+                    left: -(kutu.offsetWidth*4), // Kaydırma miktarını buradan ayarlayabilirsiniz
+                    behavior: 'smooth'
+                });
+                if (productList.scrollLeft <= 0) {
+                    productList.scrollLeft = productList.scrollWidth; // En sona atla
+                }
+                setTimeout(enableClick, 400); // 0.7 saniye bekleme
+            }
+        };
+        var kutu=document.getElementById("kutu");
+        document.getElementById('scroll-right').onclick = function() {
+            if (canClick) {
+                canClick = false;
+                var productList = document.getElementById('product-list');
+                productList.scrollBy({
+                    left:kutu.offsetWidth*4, // Kaydırma miktarını buradan ayarlayabilirsiniz
+                    behavior: 'smooth'
+                });
+                if (productList.scrollLeft + productList.clientWidth >= productList.scrollWidth) {
+                    productList.scrollLeft = 0; // En başa atla
+                }
+                setTimeout(enableClick, 400); // 0.7 saniye bekleme
+            }
+        };
+    </script>
+
+
+
+
+
+
+   
+    </div>
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3">
+        <div class="container">
+            <p class="mb-0">© 2025 Kitap Satış Sitesi. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Özel JavaScript -->
+        
+    </script>
+</body>
+</html>
